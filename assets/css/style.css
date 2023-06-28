@@ -331,6 +331,126 @@ https://en.bem.info/methodology/quick-start/*/
   gap: 1rem;
 }
 
+.formcontato__contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  flex: 1 0 0;
+}
+
+.formcontato__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.formcontato__title {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.formcontato__subtext {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.formcontato__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  align-self: stretch;
+}
+
+/* .marcapos {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.4375rem;
+  align-self: stretch;
+  border-radius: 0.25rem;
+} */
+
+.form__placeholder::placeholder {
+  color: #a2a2a2;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.form__span {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0 1rem 6rem;
+}
+
+.formcontato__input {
+  display: inline-block;
+  width: 34rem;
+  padding: 10px 0 10px 15px;
+  color: #377d6a;
+  background: #f5f5f5;
+  border: 0;
+  border-radius: .3125rem;
+  outline: 0;
+  text-indent: 70px;
+  transition: all 0.3s ease-in-out;
+
+  + .form__label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 1rem;
+    padding: 10px 15px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    background: #2a7ae4;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+}
+
+.formcontato__input:focus,
+.formcontato__input:active {
+  color: #377d6a;
+  text-indent: 0;
+  background: #fff;
+
+  + .form__label {
+    transform: translateX(-100%);
+  }
+}
+
+.formcontato__textarea{
+  transition: all 0.5s ease-in-out;
+  margin: 0 0 0 6rem;
+  width: 35rem;
+  background: #f5f5f5;
+  resize: none;
+  border-radius: .3125rem;
+  outline: 0;
+  border: none;
+}
+
+.formcontato__textarea:focus,
+.formcontato__textarea:active{
+  height: 8rem;
+  background: #fff;
+}
+
+.formcontato__botao{
+  padding: 1rem;
+    background: #2a7ae4;
+    color: #fff;
+    font-size: 1rem;
+}
 /*footeer*/
 
 /* Vamos a desafiarnos trabajando con responsividad?
