@@ -41,10 +41,10 @@
                 <h3 class="title__subsection">Soy formada en .... lorem ipsum sit amet consectetur y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</h3>
                 <ul class="title__network">
                      <!-- Pon los enlaces de tus redes sociales favoritas -->
-                    <li class="title__network__item"><a href="">Github <img src="assets\arrow.png"> </a></li>
-                    <li class="title__network__item"><a href="">Linkedin <img src="assets\arrow.png"></a></li>
-                    <li class="title__network__item"><a href="">Instagram <img src="assets\arrow.png"></a></li>
-                    <li class="title__network__item"><a href="">Currículo <img src="assets\arrow.png"></a></li>
+                    <li class="title__network__item"><a href="" class="links"><div class="ico-github ico"></div>Github</a></li>
+                    <li class="title__network__item"><a href="" class="links"><div class="ico-linkedin ico"></div>Linkedin</a></li>
+                    <li class="title__network__item"><a href="" class="links"><div class="ico-instagram ico"></div>Instagram</a></li>
+                    <li class="title__network__item"><a href="" class="links"><div class="ico-cv ico"></div>Currículo</a></li>
                 </ul>
             </div>
         </div>
@@ -67,8 +67,15 @@
             <div class="skills__line config--skihob">
                 <div class="skills__box config--box">
                     <ul>
-                        <li class="skills__img"><img src="assets\htlm.png"></li>
+                        <li class="skills__img"><img src="./assets/svg/html5.svg" width="28px"></li>
                         <li class="skills__name"> HTML 5</li>
+                    </ul>
+                </div>
+
+                <div class="skills__box">
+                    <ul>
+                        <li class="skills__img"><img src="assets\css_icon.png" alt=""> </li>
+                        <li class="skills__name">CSS</li>
                     </ul>
                 </div>
 
@@ -78,7 +85,7 @@
                         <li class="skills__name">Javascript</li>
                     </ul>
                 </div>
-
+                
                 <div class="skills__box">
                     <ul>
                         <li class="skills__img"> <img src="assets\php_icon.png" alt=""></li>
@@ -92,20 +99,14 @@
                         <li class="skills__name">Node JS</li>
                     </ul>
                 </div>
-
+                
                 <div class="skills__box">
                     <ul>
                         <li class="skills__img"> <img src="assets\react_icon.png" alt=""> </li>
                         <li class="skills__name">React</li>
                     </ul>
                 </div>
-
-                <div class="skills__box">
-                    <ul>
-                        <li class="skills__img"> <img src="assets\css_icon.png" alt=""> </li>
-                        <li class="skills__name">CSS</li>
-                    </ul>
-                </div>
+                
         </div>
     </section>
 
@@ -194,7 +195,7 @@
         <div class="experiencie__box">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets\decod_print.png">
-            <div class="experience__info"
+            <div class="experience__info">
                 <h2 class="experience__title">Encriptador de texto</h2>
                 <h3 class="experience__text">Challenge Alura Codificador </h3>
                     <div class="experience__description">
@@ -208,7 +209,7 @@
         <div class="experience__box">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets\forca_print.png">
-            <div class="experience__info"
+            <div class="experience__info">
                 <h2 class="experience__title">Juego creado con HTML y JavaScript</h2>
                 <h3 class="experience__text">Challenge Oracle </h3>
                     <div class="experience__description">
@@ -222,7 +223,7 @@
         <div class="experiencie__box">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets\secretcode_print.png">
-            <div class="experience__info-container"
+            <div class="experience__info-container">
                 <h2 class="experience__title">Encriptador de texto</h2>
                 <h3 class="experience__text">Challenge Oracle </h3>
                     <div class="experience__description">
@@ -235,7 +236,7 @@
 
         <div class="experience__box">
             <img class="experience__img" src="assets\forca2_print.png">
-            <div class="experience__info-container"
+            <div class="experience__info-container">
             <h2 class="experience__title">Juego creado con HTML, CSS y JavaScript</h2>
                 <h3 class="experience__text">Challenge Oracle </h3>
                     <div class="experience__description">
@@ -250,9 +251,9 @@
     <!-- Sección de Contacto -->
     <section class="formcontato contenedor--centrado" id="contacto">
         <div  class="formcontato__contacto">
-            <div class="formcontato--esquerda">
+            <!-- <div class="formcontato--esquerda">
                 <img class="formcontato__img" src="assets\contact_image.png">
-            </div>
+            </div> -->
             <div class="formcontato__contenedor">
                 <div class="formcontato__text">
                     <h2 class="formcontato__title">Contacto</h2>
@@ -265,14 +266,15 @@
                             <label for="nombre" class="form__label">Nombre</label>
                         </span>
                         <span class="form__span">
-                            <input class="formcontato__input form__placeholder" type="email" name="email" placeholder="E-mail">
-                            <label for="" class="form__label">Email</label>
+                            <input class="formcontato__input form__placeholder" type="email" name="email" placeholder="E-mail" id="email">
+                            <label for="email" class="form__label">Email</label>
                         </span>
                         <span class="form__span">
-                            <input class="formcontato__input form__placeholder" type="text" name="asunto" placeholder="Assunto">
-                            <label for="" class="form__label">Asunto</label>
+                            <input class="formcontato__input form__placeholder" type="text" name="asunto" placeholder="Asunto" id="asunto">
+                            <label for="Asunto" class="form__label">Asunto</label>
                         </span>
-                        <textarea class="formcontato__textarea form__placeholder" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Mensaje"></textarea>
+                        <textarea class="formcontato__textarea form__placeholder" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Deje su mensaje"></textarea>
+                        
                         <button type="submit" class="formcontato__botao">Enviar mensaje</button>
                     </form>
             </div>
