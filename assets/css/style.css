@@ -1,7 +1,7 @@
 /*CSS Reset / Normalize*/
 /* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
 en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+/*Já deixaremos o básico de reset de estilos. Caso quiera adicionar mas información
 coloque nas sessões indicadas*/
 
 :root {
@@ -25,7 +25,7 @@ body {
 .tudo {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 ol,
 ul,
@@ -42,6 +42,7 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
 }
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -60,8 +61,9 @@ https://en.bem.info/methodology/quick-start/*/
 
 .menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #f5f5f5;
+  padding: 0 2rem;
 }
 
 .menu__header {
@@ -84,6 +86,7 @@ https://en.bem.info/methodology/quick-start/*/
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding: 0;
 }
 
 .menu__list__item {
@@ -131,7 +134,7 @@ https://en.bem.info/methodology/quick-start/*/
 /*Sección Title*/
 
 .title {
-  padding: 2rem 9.5rem;
+  padding: 2rem;
 }
 
 .title__div {
@@ -147,7 +150,7 @@ https://en.bem.info/methodology/quick-start/*/
 }
 .title__bio {
   font-weight: 700;
-  font-size: 3.25em;
+  font-size: 3em;
   line-height: 3.8156rem;
 }
 .title__subsection {
@@ -164,27 +167,36 @@ https://en.bem.info/methodology/quick-start/*/
   padding: 0;
 }
 
-.links{
+.title__network__item {
+  transition: all 1s ease;
+}
+
+.title__network__item:hover {
+  box-shadow: rgba(75, 79, 83, 0.2) 0px 8px 24px;
+  border-radius: 0.3125rem;
+}
+
+.links {
   display: flex;
   align-items: center;
 }
 
-.ico-github{
+.ico-github {
   background: url(../svg/github.svg);
   background-repeat: no-repeat;
 }
 
-.ico-linkedin{
+.ico-linkedin {
   background: url(../svg/linkedin.svg);
   background-repeat: no-repeat;
 }
 
-.ico-instagram{
+.ico-instagram {
   background: url(../svg/instagram.svg);
   background-repeat: no-repeat;
 }
 
-.ico-cv{
+.ico-cv {
   background: url(../svg/file-pdf-solid.svg);
   background-repeat: no-repeat;
 }
@@ -192,13 +204,12 @@ https://en.bem.info/methodology/quick-start/*/
 
 .about {
   background-color: var(--cor-de-sobre-mi);
-  padding-left: 9.5rem;
+  padding: 2rem;
 }
 
-.about__container {
-  margin: 4rem;
-  padding: 3.375rem 24.0625rem 4.25rem 0rem;
-}
+/* .about__container {
+  padding: 2rem;
+} */
 
 .about__title {
   font-weight: 700;
@@ -217,9 +228,10 @@ https://en.bem.info/methodology/quick-start/*/
   font-weight: 700;
 }
 .config--skihob {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   gap: 1rem;
+  width: 100%;
 }
 
 .config--skihob ul {
@@ -228,42 +240,39 @@ https://en.bem.info/methodology/quick-start/*/
 
 .skills__box {
   background-color: var(--fondo-blanco);
-  width: 11rem;
-  height: 10.875rem;
+  width: 100%;
+  height: 11rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.skills__images{
-width: 7.25rem;
+.skills__images {
+  width: 7.25rem;
 }
 
 .hobbies__box {
   background-color: var(--fondo-blanco);
-  width: 11rem;
-  height: 10.875rem;
+  width: 100%;
+  height: 11rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Sección Hobbies*/
-
-.hobbies__line {
-  display: flex;
-}
 
 /* Experiencia Académica*/
 
 .academic {
   background-color: var(--cor-de-sobre-mi);
-  padding: 5.125rem;
   margin-bottom: 0;
 }
 
 .academic__courses {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  width: 100%;
   gap: 1rem;
 }
 
@@ -277,7 +286,6 @@ width: 7.25rem;
 
 .academic__courses__item__img {
   background-color: var(--fondo-blanco);
-  width: 23rem;
   height: 17.875rem;
   display: flex;
   justify-content: center;
@@ -299,14 +307,14 @@ width: 7.25rem;
 }
 .experiencie__box {
   display: flex;
-  width: 71rem;
+  /* width: 71rem; */
   height: 25.375rem;
   align-items: center;
   gap: 1rem;
 }
 
 .experience__img {
-  width: 47rem;
+  width: 60%;
   flex-shrink: 0;
   align-self: stretch;
 }
@@ -368,7 +376,7 @@ width: 7.25rem;
 
 .formcontato__contacto {
   display: flex;
-  width: 71rem;
+  /* width: 71rem; */
   padding-top: 4rem;
   align-items: center;
   gap: 1rem;
@@ -404,21 +412,10 @@ width: 7.25rem;
 .formcontato__form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: 2rem;
   align-self: stretch;
 }
-
-/* .marcapos {
-  display: flex;
-  flex-direction: column;
-  padding-top: 0.5rem;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 0.4375rem;
-  align-self: stretch;
-  border-radius: 0.25rem;
-} */
 
 .form__placeholder::placeholder {
   color: #a2a2a2;
@@ -437,13 +434,13 @@ width: 7.25rem;
 .form__span {
   position: relative;
   display: inline-block;
-  margin: 1rem 0 1rem 6rem;
+  /* margin: 1rem 0 1rem 6rem; */
 }
 
 .formcontato__input {
   display: inline-block;
-  width: 60rem;
-  padding: 10px 0 10px 15px;
+  width: 100%;
+  padding: 10px 0 10px 0;
   color: #377d6a;
   background: #f5f5f5;
   border: 0;
@@ -484,9 +481,9 @@ width: 7.25rem;
 
 .formcontato__textarea {
   transition: all 0.5s ease-in-out;
-  margin: 0 0 0 6rem;
+  /* margin: 0 0 0 6rem; */
   padding: 1rem 0px 1rem 1rem;
-  width: 60rem;
+  /* width: 60rem; */
   height: 2rem;
   background: #f5f5f5;
   resize: none;
@@ -505,12 +502,12 @@ width: 7.25rem;
 }
 
 .formcontato__botao {
-  margin: 0 0 2rem 6rem;
+  margin: 0 0 2rem 0;
   padding: 1rem;
   background: #2a7ae4;
   color: #fff;
   font-size: 1rem;
-  width: 61rem;
+  /* width: 61rem; */
   border-radius: 5px;
   border: none;
   transition: all 0.3s ease-in-out;
@@ -528,70 +525,139 @@ width: 7.25rem;
   background: var(--fondo-blanco);
 }
 
-.footer__rodape{
+.footer__rodape {
   text-align: center;
 }
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   /* Menú */
 
-  .menu{
+  .menu {
+    padding: 1rem 2rem;
     justify-content: space-between;
-
   }
 
-  .menu__title{
-    font-size: 1rem;
+  .menu__title {
+    font-size: 0.9375rem;
   }
 
-  .menu__list__item{
+  .menu__list {
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .menu__list__item {
+    display: none;
+  }
+
+  .menu .ico {
     display: none;
   }
 
   /*title*/
 
-  .title{
+  .title {
     padding: 2rem;
   }
 
-  .title__div{
-    align-self: stretch;
-    
+  .title__div {
+    justify-content: center;
   }
 
   .title__bio {
     font-size: 1.375rem;
   }
 
-  .title__subsection{
+  .title__subsection {
     font-size: 1rem;
   }
 
-  .title__profile{
-    width: 9.125rem;
+  .title__profile {
+    width: 10rem;
   }
 
+  /* about */
+
+  .about {
+    padding: 2rem;
+  }
+
+  .about__container {
+    padding: 0;
+  }
   /*Skills*/
+
+  .config--skihob {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
 
   /*Hobbies*/
 
   /*Formación Académica*/
 
+  .academic__courses__item__img {
+    height: auto;
+  }
+
   /*Experiencia Profesional*/
+  .experiencie__box,
+  .experience__box {
+    flex-wrap: wrap;
+    width: auto;
+    height: auto;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .experience__img {
+    width: 100%;
+  }
+
+  /* Contacto */
+  .formcontato__contacto {
+    width: auto;
+  }
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 667px) {
   /*Menu*/
+  .menu {
+    padding: 1rem;
+  }
+
+  .menu .ico {
+    display: block;
+  }
 
   /*Titulo*/
+  .title__div {
+    flex-direction: column;
+    gap: 0;
+  }
+  .title__bio {
+    font-size: 1.5em;
+    line-height: 1.5rem;
+  }
+
+  .title__network {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .title__network__item {
+    width: 45%;
+  }
 
   /*Sección sobre mi*/
 
   /*Skills*/
+  .config--skihob {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
 
   /*Hobbies*/
 
