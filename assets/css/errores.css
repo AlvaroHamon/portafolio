@@ -1,0 +1,47 @@
+.formcontato__input--error {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  color: #377d6a;
+  background: #f5f5f5;
+  border: 0;
+  /* border: 2px solid #ff0000; */
+  border-radius: 0.3125rem;
+  outline: 0;
+  text-indent: 70px;
+  /* border-bottom: 2px solid transparent; */
+  transition: all 0.3s ease-in-out;
+
+  + .form__label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 1rem;
+    padding: 10px 15px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    background: #ff0000;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+}
+
+.formcontato__input--error:focus,
+.formcontato__input--error:active {
+  color: #377d6a;
+  text-indent: 0;
+  background: #fff;
+  /* border-bottom-color: #ff0000; */
+  opacity: 1;
+
+  + .form__label {
+    transform: translateX(-100%);
+  }
+}
+
+.formcontato__mensaje--error, .formcontato__mensaje--error-format {
+  color: #ff0000;
+  display: none;
+}

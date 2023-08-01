@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Referencia de la hoja de estilo de Css -->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/errores.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonte del Proyecto Raleway -->
@@ -260,16 +261,19 @@
                 </div>
                     <form class="formcontato__form" name="form">
                         <span class="form__span">
-                            <input class="formcontato__input form__placeholder" type="text" name="nombre" placeholder="Nombre" id="nombre">
+                            <input class="formcontato__input form__placeholder" type="text" name="nombre" placeholder="Nombre" id="nombre" required>
                             <label for="nombre" class="form__label">Nombre</label>
+                            <span class="formcontato__mensaje--error">El campo Nombre no puede estar vacío</span>
                         </span>
                         <span class="form__span">
-                            <input class="formcontato__input form__placeholder" type="email" name="email" placeholder="E-mail" id="email">
+                            <input class="formcontato__input form__placeholder" type="email" name="email" placeholder="E-mail" id="email" required>
                             <label for="email" class="form__label">Email</label>
+                            <span class="formcontato__mensaje--error">Por favor, ingrese un correo electrónico válido</span>
                         </span>
                         <span class="form__span">
-                            <input class="formcontato__input form__placeholder" type="text" name="asunto" placeholder="Asunto" id="asunto">
+                            <input class="formcontato__input form__placeholder" type="text" name="asunto" placeholder="Asunto" id="asunto" required>
                             <label for="Asunto" class="form__label">Asunto</label>
+                            <span class="formcontato__mensaje--error">Indique el asunto por el cual se contacta</span>
                         </span>
                         <textarea class="formcontato__textarea form__placeholder" rows="5" cols="40" id="mensagem" name="mensaje" placeholder="Deje su mensaje"></textarea>
                         
